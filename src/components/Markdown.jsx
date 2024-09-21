@@ -58,7 +58,9 @@ export default function _Markdown({ markdownText }) {
         ),
         p: ({ children }) => <p className="text-justify">{children}</p>,
         code: ({ children }) => (
-          <code className="rounded-md bg-gray-200 p-1">{children}</code>
+          <code className="rounded-md border-0 bg-gray-200 p-1">
+            {children}
+          </code>
         ),
       }}
       remarkPlugins={[remarkGfm]}

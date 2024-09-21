@@ -8,8 +8,17 @@ const wordsPerMinute = 225
 export default function Article() {
   const { id } = useParams()
   const { state, dispatch } = useStore()
+  const [article, setArticle] = useState()
 
-  const article = state.articles.find((article) => article.id === +id)
+  useEffect(() => {
+    const page = state.articles.find((article) => article.id === +id)
+
+    if (!page) return
+
+    setArticle(page)
+  }, [state.articles, id])
+
+  if (!article) return <div>Loading...</div>
 
   const articleLength = article.content.split(' ').length
 

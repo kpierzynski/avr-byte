@@ -13,6 +13,7 @@ export default defineConfig({
       '@stores': path.resolve(__dirname, './src/stores'),
       '@primitives': path.resolve(__dirname, './src/components/primitives'),
       '@views': path.resolve(__dirname, './src/views'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
   define: {

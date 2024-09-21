@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useState, useEffect, useReducer } from 'react'
 
 const StoreContext = React.createContext()
 
@@ -6,14 +6,14 @@ const initialState = {
   articles: [],
 }
 
-const ACTIONS = {
-  ADD_ARTICLES: 'ADD_ARTICLES',
+export const ACTIONS = {
+  ADD_ARTICLE: 'ADD_ARTICLE',
 }
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case ACTIONS.ADD_ARTICLES:
-      return { ...state, articles: [...state.articlesm, action.payload] }
+    case ACTIONS.ADD_ARTICLE:
+      return { ...state, articles: [...state.articles, action.payload] }
     default:
       return state
   }

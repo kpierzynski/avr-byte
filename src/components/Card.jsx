@@ -4,7 +4,7 @@ export default function Card({ title, date, begin, id, imgSrc }) {
   const src = '/article/' + id
 
   return (
-    <div className="flex flex-row transition duration-200 hover:scale-[101%]">
+    <div className="flex grow flex-row transition duration-200 hover:scale-[101%]">
       {imgSrc && (
         <img src={imgSrc} className="py-4 pr-4 grayscale" alt="random" />
       )}
@@ -12,15 +12,15 @@ export default function Card({ title, date, begin, id, imgSrc }) {
       <div className="flex flex-col gap-2 py-6">
         <Link
           to={src}
-          className="border-primary pb-4 text-3xl font-normal text-primary"
+          className="border-primary pb-4 text-3xl font-bold text-primary"
         >
           {title}
         </Link>
 
-        <h3 className="text-md text-primary">{date}</h3>
+        <h3 className="text-sm text-primary">{date}</h3>
         <p>{begin}</p>
 
-        <Link to={src} className="self-end">
+        <Link to={src} className="underline">
           Read more {'->'}
         </Link>
       </div>

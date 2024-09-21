@@ -6,10 +6,10 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full py-6 text-center text-8xl font-extrabold uppercase tracking-[1rem]">
+      <div className="py-6 text-center text-8xl font-extrabold uppercase tracking-[1rem]">
         the {appName}
       </div>
-      <div className="flex flex-col divide-y-2 divide-primary py-4">
+      <div className="grow divide-y-2 divide-primary py-4">
         {state.articles.map((article, i) => (
           <Card
             key={`article-${i}`}
