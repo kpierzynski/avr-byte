@@ -51,16 +51,20 @@ export default function _Markdown({ markdownText }) {
         ul: ({ children }) => (
           <ul className="list-inside list-disc">{children}</ul>
         ),
-        li: ({ children }) => <li className="">{children}</li>,
+        li: ({ children, ...rest }) => {
+          console.log('REST', rest)
+          return <li className="">{children}</li>
+        },
 
         img: ({ src, alt }) => (
           <img className="grayscale" src={src} alt={alt} />
         ),
-        p: ({ children }) => <p className="text-justify">{children}</p>,
-        code: ({ children }) => (
-          <code className="rounded-md border-0 bg-gray-200 p-1">
+        p: ({ children }) => <p className="py-2 text-justify">{children}</p>,
+
+        pre: ({ children }) => (
+          <pre className="my-2 text-wrap rounded-md bg-gray-200 p-2">
             {children}
-          </code>
+          </pre>
         ),
       }}
       remarkPlugins={[remarkGfm]}
