@@ -51,16 +51,17 @@ export default function _Markdown({ markdownText }) {
         ul: ({ children }) => (
           <ul className="list-inside list-disc">{children}</ul>
         ),
-        li: ({ children, ...rest }) => {
-          console.log('REST', rest)
-          return <li className="">{children}</li>
-        },
+        li: ({ children }) => <li className="">{children}</li>,
 
         img: ({ src, alt }) => (
           <img className="grayscale" src={src} alt={alt} />
         ),
         p: ({ children }) => <p className="py-2 text-justify">{children}</p>,
-
+        code: ({ children }) => (
+          <code className="my-1 rounded-md border-0 bg-gray-200 p-1">
+            {children}
+          </code>
+        ),
         pre: ({ children }) => (
           <pre className="my-2 text-wrap rounded-md bg-gray-200 p-2">
             {children}
