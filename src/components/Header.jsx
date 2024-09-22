@@ -20,7 +20,9 @@ export default function Header() {
   const ArticleHeader = () => (
     <div className="flex place-content-between">
       <Link to="/">/home</Link>
-      <span className="self-center pt-4 text-xl">{appName}</span>
+      <span className="self-center pt-4 text-xl">
+        {import.meta.env.VITE_APP_NAME}
+      </span>
       <span className="">#{id}</span>
     </div>
   )

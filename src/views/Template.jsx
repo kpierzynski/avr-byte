@@ -25,7 +25,8 @@ export default function Template() {
 
         {!pathname.includes('article') && (
           <div className="py-6 text-center text-6xl font-extrabold uppercase tracking-[1rem] sm:text-7xl sm:tracking-[1.2rem] md:text-7xl md:tracking-[0.9rem] lg:text-8xl lg:tracking-[1rem]">
-            <span className="hidden md:inline">the</span> {appName}
+            <span className="hidden md:inline">the</span>{' '}
+            {import.meta.env.VITE_APP_NAME}
           </div>
         )}
 

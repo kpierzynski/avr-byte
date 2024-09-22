@@ -1,10 +1,10 @@
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, 0))
 
 const config = {
-  owner: repoOwner,
-  repo: repoName,
-  branch: repoBranch,
-  path: repoArticles,
+  owner: import.meta.env.VITE_OWNER,
+  repo: import.meta.env.VITE_REPO,
+  branch: import.meta.env.VITE_BRANCH,
+  path: import.meta.env.VITE_ARTICLES,
 }
 
 export const fetchFileContent = async ({ path }) => {
