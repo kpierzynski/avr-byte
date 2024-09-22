@@ -6,11 +6,11 @@ export default function _Markdown({ markdownText }) {
   return (
     <Markdown
       components={{
-        h1: ({ children }) => <h1 className="text-4xl">{children}</h1>,
-        h2: ({ children }) => <h1 className="text-2xl">{children}</h1>,
-        h3: ({ children }) => <h1 className="text-xl">{children}</h1>,
+        h1: ({ children }) => <h1 className="py-4 text-4xl">{children}</h1>,
+        h2: ({ children }) => <h1 className="py-2 text-2xl">{children}</h1>,
+        h3: ({ children }) => <h1 className="py-1 text-xl">{children}</h1>,
         strong: ({ children }) => (
-          <strong className="font-bold">{children}</strong>
+          <strong className="font-normal">{children}</strong>
         ),
         em: ({ children }) => <em className="italic">{children}</em>,
         a: ({ children, href }) => (

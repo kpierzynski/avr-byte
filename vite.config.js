@@ -18,5 +18,9 @@ export default defineConfig({
   },
   define: {
     appName: JSON.stringify('AVR-byte'),
+    repoOwner: JSON.stringify('kpierzynski'),
+    repoBranch: JSON.stringify('master'),
+    repoName: JSON.stringify('avr-byte'),
+    repoArticles: JSON.stringify('articles'),
   },
 })

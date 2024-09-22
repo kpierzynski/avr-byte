@@ -2,14 +2,16 @@ import React from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
 export default function Header() {
-  const location = useLocation()
+  const { pathname } = useLocation()
 
-  const isArticle = location.pathname.startsWith('/article')
-  const id = location.pathname.split('/').pop().padStart(3, '0')
+  const isArticle = pathname.startsWith('/article')
+
+  let id = pathname.split('/').pop()
+  id = /^\d+$/.test(id) ? id.padStart(3, '0') : '000'
 
   const HomeHeader = () => (
     <div className="flex justify-evenly uppercase">
-      <Link to="/article/1">github</Link>
+      <Link to="https://github.com/kpierzynski">github</Link>
       <Link to="/">blog</Link>
       <Link to="/about">about</Link>
     </div>
